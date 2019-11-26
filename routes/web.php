@@ -23,7 +23,7 @@ Route::post('/post/upload', function(Request $request){
 
 	]);
 
-	$path = request()->file('media')->store('Zeb','s3');
+	$path = request()->file('media')->store(Auth::user()->name,'s3');
 
 
 	$seed_url = Storage::cloud()->url($path);
