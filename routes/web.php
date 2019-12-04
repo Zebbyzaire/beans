@@ -53,7 +53,7 @@ Route::get('/post/delete/{post}', function($id){
 });
 
 
-Route::post('/device/fcm/token', function(Request $request){
+Route::post('/device/fcm/{token}', function(Request $request){
         
        $token = $request->input('fcmToken');
        $data = ['name' => 'Meggie Blu',
