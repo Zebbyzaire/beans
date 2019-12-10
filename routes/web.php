@@ -79,6 +79,6 @@ Route::get('/post/text/{number}', function($phone_number){
               ]);
     });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
